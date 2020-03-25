@@ -1,30 +1,17 @@
-vector<int> makeQueue(Node* root,int l,int h)
+void v(Node* root, int hd, int &l, int &r)
 {
-    queue<Node*> q;
-    vector<int> vec;
-    q.push(root);
-    while(!q.empty())
-    {
-        Node* temp=q.front();
-        q.pop();
-        if(temp->data<=h && temp->data>=l)
-        vec.push_back(temp->data);
-        if(temp->right)
-        q.push(temp->right);
-        if(temp->left)
-        q.push(temp->left);
-    }
-    return vec;
+    if(root==NULL)
+    return;
+    l=min(l,hd);
+    r=max(r,hd);
+    v(root->left,hd-1,l,r);
+    v(root->right,hd+1,l,r);
 }
-void printNearNodes(Node *root, int l, int h)
+int verticalWidth(Node* root)
 {
-    vector<int>vec = makeQueue(root,l,h);
-    sort(vec.begin(),vec.end());
-    for(int i=0;i<vec.size();i++)
-    {
-        cout<<vec[i]<<" ";
-    }
-    //cout<<endl;
+ int l=0,r=0;
+ v(root,0,l,r);
+ return abs(l)+r+1;
 }
 /*Algorithm:
 1) If value of root’s key is greater than k1, then recursively call in left subtree.
