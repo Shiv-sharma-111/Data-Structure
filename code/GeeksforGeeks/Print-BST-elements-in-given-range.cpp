@@ -17,3 +17,10 @@ int verticalWidth(Node* root)
 1) If value of root’s key is greater than k1, then recursively call in left subtree.
 2) If value of root’s key is in range, then print the root’s key.
 3) If value of root’s key is smaller than k2, then recursively call in right subtree.*/
+
+/*
+Approach: Take inorder traversal and then take a temporary variable, if we got
+left then temp value decreases and if go to right temp value increases. Assest a condition
+in this , if minimum is greater than temp, then minimum = temp and if maximum less than temp then
+maximum = temp. at the end print minimum+maximum which is verticle width  of the tree.
+*/
