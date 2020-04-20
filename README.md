@@ -1,5 +1,4 @@
 # Data-Structure
 This is all about my Data-Structure Programs. <br>
 **Mentored By**: `Er. Adhbhut Prakash Dwedi`, HBTU Kanpur. <br>
-[`Shiv Sharma`](https://Shiv-sharma-111.github.io) <br>
-Licensed under the [MIT License](LICENSE).
+[`Shiv Sharma`](https://axshivam.codes) <br>
